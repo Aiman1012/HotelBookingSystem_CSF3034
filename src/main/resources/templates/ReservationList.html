@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Rooms</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"  />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="container text-center"><h1>List Of Reservations</h1></div>
+<div class="text-center p-4"><h3><a th:href="@{/reservationList/new}">Add New Reservations</a></h3></div>
+<div class="container-fluid">
+    <table class="table table-bordered text-center">
+        <thead class="table-info">
+        <tr>
+            <th>Reservation ID</th>
+            <th>Check In Date</th>
+            <th>Check Out Date</th>
+            <th>Room Type</th>
+            <th>Room Type</th>
+            <th>Number Of Guests</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody class="text-center table-primary">
+        <th:block th:each="reservation : ${ListReservations}">
+            <tr>
+                <td th:text="${reservation.reservationId}"></td>
+                <td>[[${reservation.checkInDate}]]</td>
+                <td>[[${reservation.checkOutDate}]]</td>
+                <td>[[${reservation.roomType}]]</td>
+                <td>[[${reservation.numOfGuests}]]</td>
+                <td>
+                    <a class="p-3" th:href="@{'/reservationList/edit/' + ${reservation.reservationId}}"><i class='bx bxs-edit-alt' ></i></a>
+                    <a class="py-1" th:href="@{'/reservationList/delete/' + ${reservation.reservation.Id}}"><i class='bx bxs-trash ' ></i></a>
+                </td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

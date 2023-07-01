@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <script type="text/javascript" src="reservation.js"></script>
+	<link rel="stylesheet" type="text/css" href="reservation.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">	
+
+	<title>SriMayang - Reservation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="cont-box">
+		<div class="container">
+			<div class="contact-box">
+				<div class="left"></div>
+                                
+                                <div class="right">
+                                    
+                                    <h2>Room Reservation</h2><br>
+                                    <form action="../jsp/reservation.jsp" method="post">
+                                        <label for="cid">Check-In Date:</label>
+                                        <input type="date" id="cid" name="cid" required><br>
+                                        
+                                        <label for="cod">Check-Out Date:</label>
+                                        <input type="date" id="cod" name="cod" required><br>
+
+                                        <label for="roomtype">Room Type:</label>
+                                        <select id="roomtype" name="roomtype" required>
+                                            <option value="">Select</option>
+                                            <option value="single">Single</option>
+                                            <option value="double">Double</option>
+                                            <option value="suite">Suite</option>
+                                        </select><br>
+                                        
+                                        <label for="numguest">Number of Guests:</label>
+                                        <input type="number" id="numguest" name="numguest" required><br>
+
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" required><br>
+
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" required><br>
+
+                                        <label for="phone">Phone Number:</label>
+                                        <input type="text" id="phone" name="phone" required><br><br>
+                                        
+                                        <input type="submit" id="btn" name="btn" value="Reserve">
+                                    </form>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div class="forthBox">
+
+        <div class="forthBox-left">
+            <p>&#169; Villa SriMayang. All rights reserved</p>
+        </div>
+
+        <div class="forthBox-right">
+            <p>Our Social</p>
+
+            <div>
+                <img src="icon/facebook.png">
+                <img src="icon/twitter.png">
+                <img src="icon/instagram.png">
+            </div>
+
+        </div>
+
+    </div>
+    </body>
+</html>
